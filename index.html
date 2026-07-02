@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accessibility Form User Interface">
+    <link rel="icon" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="assets/style.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');</style>
+    <title>Accessible Form</title>
+</head>
+<body>
+    <header class="main-header"><p>Accessible Form UI</p></header>
+    <main>
+        <section>
+            <form>
+                <div class="form-input-container">
+                    <div class="form-group">
+                        <label for="fullname">Full Name:</label>
+                        <input id="fullname" type="text" class="name" required minlength="8" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input autocomplete="email" id="email" type="email" class="mail" required minlength="8" placeholder="" aria-invalid="false" aria-describedby="email-error">
+                        <p id="email-error" class="error-msg">Invalid Email</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Enter Password</label>
+                        <input id="password" type="password" class="pass" required minlength="8" placeholder="" aria-invalid="false" aria-describedby="password-error">
+                        <p id="password-error" class="error-msg">Invalid Password</p>
+                        <button class="eye" role="switch" aria-label="Show Password" aria-checked="false" ><img src="assets/images/eye.svg" alt="show-password" aria-hidden="true"></button>
+                    </div>
+                    <div class="form-group">
+                        <label for="conf-password">Confirm Password</label>
+                        <input id="conf-password" type="password" class="conf-pass" required minlength="8" placeholder="">
+                        <button class="eye" role="switch" aria-label="Show Password" aria-checked="false" ><img src="assets/images/eye.svg" alt="show-password" aria-hidden="true"></button>
+                    </div>
+                    <button class="update-button" role="button">Update Profile</button>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-container--progress-wheel">
+                        <div class="progress-wheel"></div>
+                        <p>Profile Completeness</p>
+                    </div>
+                    <div class="progress-container--checklist">
+                        <div class="checklist">
+                            <ul>
+                                <li>Enter your Full Name</li>
+                                <li>Enter Your Email</li>
+                                <li>Create your password</li>
+                                <li>Update Your Profile!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
